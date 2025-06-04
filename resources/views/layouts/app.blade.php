@@ -52,12 +52,16 @@
             Gestion des Événements
         </div>
         <div class="navbar-right">
-            <button>Login</button>
+        <a href="{{ route('login') }}">
+                <button>login</button>
+            </a>
         </div>
     </nav>
 
     <div class="container" style="padding: 30px;">
         @yield('content')
     </div>
+    @stack('scripts')
+        
 </body>
 </html>

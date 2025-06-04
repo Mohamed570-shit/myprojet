@@ -77,5 +77,14 @@ class ClientController extends Controller
         $client->delete();
         return redirect()->route('clients.list')->with('success', 'Client supprimé avec succès');
     }
+
+
+
+    
+public function reservationparclien()
+{
+    $clients = Client::with(['reservations.evenement'])->get();
+    return view('clien.reservationparclien', compact('clients'));
 }
-// hhhhhhhhh
+
+}
